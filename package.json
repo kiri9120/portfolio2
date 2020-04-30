@@ -1,0 +1,36 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiri9120/portfolio2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiri9120/portfolio2/issues"
+  },
+  "homepage": "https://github.com/kiri9120/portfolio2#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "css-declaration-sorter": "^5.1.2",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 10",
+    "iOS >= 8.1",
+    "Android >= 4.4"
+  ]
+}
