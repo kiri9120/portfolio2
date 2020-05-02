@@ -93,8 +93,8 @@ p {
   z-index: 9999;
   -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
-  color: #fff;
-  background-color: $main-color;
+  color: $main-color;
+  background-color: $white;
 
   &.loaded {
     top: -100%;
@@ -112,7 +112,7 @@ p {
   height: 120px;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: $main-color;
   animation: spinner 1.4s infinite linear forwards;
 }
 
