@@ -230,34 +230,6 @@
     <script src="./js/mailform-js.php"></script>
     <script src="./js/main.js"></script>
     <script>
-      $(function () {
-        ScrollOut({
-          targets: ".slidein",
-          threshold: 0.5,
-        });
-        $(".hero").vegas({
-          overlay:
-            "https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.0/overlays/07.png",
-          delay: 5000,
-          firstTransition: "fade",
-          // firstTransitionDuration: 2000,
-          transition: "blur",
-          transitionDuration: 2000,
-          animation: "kenburns",
-          slides: [
-            { src: "assets/img/hero-bg1.jpg" },
-            { src: "assets/img/hero-bg2.jpg" }
-          ],
-        });
-        $("a#previous").on("click", function (e) {
-          $("body").vegas("options", "transition", "fade2").vegas("previous");
-          e.preventDefault();
-        });
-        $("a#next").on("click", function (e) {
-          $("body").vegas("options", "transition", "fade2").vegas("next");
-          e.preventDefault();
-        });
-      });
     </script>
   </body>
 </html>
