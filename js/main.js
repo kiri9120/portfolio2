@@ -1,5 +1,10 @@
 $(function () {
 
+  // ローディング
+  window.onload = function() {
+    $("#my-spinner").addClass('loaded');
+  }
+
   // scroll out
   ScrollOut({
     targets: ".slidein",
