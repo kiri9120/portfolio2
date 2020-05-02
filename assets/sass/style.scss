@@ -15,11 +15,40 @@ $breakpoints: (
 // color
 $white: #fff;
 
+p {
+  line-height: 1.5;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;
+  max-width: 1800px;
 }
 
+.main {
+  margin-left: 100px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section_ttl_block {
+  margin-bottom: 7em;
+  border-left: 2px solid #000;
+  padding-left: 4em;
+}
+.section_ttl {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.section_subttl {
+  font-size: 1rem;
+  margin-top: 1em;
+}
+
+// header
 .header {
   position: fixed;
   left: 0;
@@ -37,6 +66,7 @@ $white: #fff;
   position: absolute;
   top: 0;
   width: 100%;
+  color: $white;
 }
 
 .header_ttl_inner {
@@ -51,6 +81,7 @@ $white: #fff;
 }
 
 .header_ttl2 {
+  margin-top: 2em;
   writing-mode: vertical-lr;
 }
 
@@ -115,6 +146,45 @@ $white: #fff;
 }
 
 .header_entryBtn_label {
-  margin-top: 12px;
+  margin-top: 0.5em;
   color: $white;
+}
+
+// hero
+.hero {
+  background: blue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.hero_inner {
+  font-size: 5rem;
+}
+
+// message
+.section-message {
+  @include mq(md) {
+    padding: 100px 0;
+  }
+}
+.message_body {
+  display: flex;
+  justify-content: space-around;
+}
+.message_img {
+  width: 30%;
+  text-align: center;
+}
+.message_txt {
+  width: 70%;
+  padding: 2em;
+
+  > * + * {
+    margin-top: 1em;
+  }
+}
+
+.section-service {
+  background: green;
 }

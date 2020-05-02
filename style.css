@@ -1,6 +1,36 @@
+p {
+  line-height: 1.5;
+}
+
 .wrapper {
   width: 100%;
+  max-width: 1800px;
   overflow: hidden;
+}
+
+.main {
+  margin-left: 100px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.section_ttl_block {
+  margin-bottom: 7em;
+  border-left: 2px solid #000;
+  padding-left: 4em;
+}
+
+.section_ttl {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section_subttl {
+  margin-top: 1em;
+  font-size: 1rem;
 }
 
 .header {
@@ -15,6 +45,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  color: #fff;
 }
 
 .header_ttl_inner {
@@ -32,6 +63,7 @@
 .header_ttl2 {
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
+  margin-top: 2em;
   writing-mode: vertical-lr;
 }
 
@@ -109,8 +141,54 @@
 }
 
 .header_entryBtn_label {
-  margin-top: 12px;
+  margin-top: 0.5em;
   color: #fff;
+}
+
+.hero {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  background: blue;
+  padding: 0 10%;
+  height: 100vh;
+}
+
+.hero_inner {
+  font-size: 5rem;
+}
+
+.message_body {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+}
+
+.message_img {
+  width: 30%;
+  text-align: center;
+}
+
+.message_txt {
+  padding: 2em;
+  width: 70%;
+}
+
+.message_txt > * + * {
+  margin-top: 1em;
+}
+
+.section-service {
+  background: green;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,5 +218,8 @@
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
+  }
+  .section-message {
+    padding: 100px 0;
   }
 }
