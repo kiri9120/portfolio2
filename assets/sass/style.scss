@@ -17,7 +17,7 @@ $white: #fff;
 $main-color: skyblue;
 
 p {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .wrapper {
@@ -35,6 +35,7 @@ p {
 }
 
 .container {
+  width: 90%;
   margin: 0 auto;
 
   @include mq(md) {
@@ -331,6 +332,12 @@ p {
 .message_img {
   width: 30%;
   text-align: center;
+  position: relative;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 .message_txt {
   width: 70%;
@@ -343,31 +350,44 @@ p {
 
 // service
 .section-service {
-  background: green;
+  background: url("../assets/img/hero-bg1.jpg") center/cover;
+  color: $white;
 
-  @include mq(md) {
+  .filter {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .container {
     padding: 100px 0;
+  }
+  .section_ttl_block {
+    border-left-color: $white;
   }
 }
 .service_group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .service_item {
   width: 100%;
 
   @include mq(md) {
+    width: calc((100% - 30px) / 2);
+  }
+  @include mq(lg) {
     width: calc((100% - 30px * 3) / 4);
   }
 }
 .service_item_img {
   width: 100%;
   text-align: center;
-  border: solid 1px black;
+  border: solid 1px $white;
+  padding: 2em;
+  box-sizing: border-box;
 
   img {
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
   }
 }
 .service_item_content {
@@ -379,8 +399,6 @@ p {
 
 // works
 .section-works {
-  background: gray;
-
   @include mq(md) {
     padding: 100px 0;
   }
@@ -396,7 +414,7 @@ p {
 }
 .works_item {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   @include mq(md) {
     width: calc((100% - 30px * 2) / 3);
@@ -411,8 +429,17 @@ p {
     width: 100%;
   }
 }
+.works_item_content {
+  padding: 0.5em;
+}
+.works_item_tag {
+  font-size: .75rem;
+  background: $main-color;
+  color: $white;
+  padding: 0.5em 1em;
+}
 .works_item_ttl {
-  padding: 1em;
+  margin-top: 1em;
   text-align: center;
 }
 
