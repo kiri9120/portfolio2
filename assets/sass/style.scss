@@ -20,13 +20,12 @@ $white: #fff;
 $main-color: skyblue;
 
 p {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.8;
 
   @include mq(md) {
     font-size: 1rem;
   }
-
 }
 
 .wrapper {
@@ -279,7 +278,6 @@ p {
   width: 100%;
   height: 130px;
   z-index: 10;
-  color: $white;
   background: skyblue;
   display: none;
 
@@ -293,23 +291,26 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $white;
 
   @include mq(md) {
     flex-direction: column;
     text-align: center;
   }
 }
-
+.header_entryBtn_icon {
+  font-size: 1.5em;
+}
 .header_entryBtn_label {
-  margin-top: 0.5em;
-  color: $white;
+  margin-top: 0.75em;
+  font-size: 0.875rem;
 }
 
 .menu {
   position: fixed;
   top: -160px;
   left: 0;
-  padding: 2em;
+  padding: 1.5em 2em;
   width: 100%;
   height: 220px;
   background: $main-color;
@@ -341,6 +342,24 @@ p {
 }
 .menu_item a {
   color: $white;
+  padding-bottom: 3px;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: solid 1px $white;
+    transition: 0.5s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 }
 
 // hero
@@ -539,7 +558,7 @@ p {
   right: 5%;
   bottom: -50px;
   background: $main-color;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   transition: 0.5s;
 

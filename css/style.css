@@ -1,5 +1,5 @@
 p {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.8;
 }
 
@@ -273,7 +273,6 @@ p {
   background: skyblue;
   width: 100%;
   height: 130px;
-  color: #fff;
 }
 
 .header_entryBtn_inner {
@@ -291,11 +290,16 @@ p {
   justify-content: center;
   width: 100%;
   height: 100%;
+  color: #fff;
+}
+
+.header_entryBtn_icon {
+  font-size: 1.5em;
 }
 
 .header_entryBtn_label {
-  margin-top: 0.5em;
-  color: #fff;
+  margin-top: 0.75em;
+  font-size: 0.875rem;
 }
 
 .menu {
@@ -307,7 +311,7 @@ p {
   transition: 0.5s;
   box-sizing: border-box;
   background: skyblue;
-  padding: 2em;
+  padding: 1.5em 2em;
   width: 100%;
   height: 220px;
 }
@@ -321,7 +325,27 @@ p {
 }
 
 .menu_item a {
+  -webkit-transition: 0.5s;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  padding-bottom: 3px;
   color: #fff;
+}
+
+.menu_item a:after {
+  -webkit-transition: 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  border-bottom: solid 1px #fff;
+  width: 0;
+  content: "";
+}
+
+.menu_item a:hover:after {
+  width: 100%;
 }
 
 .hero {
