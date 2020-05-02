@@ -2,7 +2,7 @@ $(function () {
 
   // ローディング
   window.onload = function() {
-    $("#my-spinner").addClass('loaded');
+    $(".loading").addClass('done');
   }
 
   // scroll out

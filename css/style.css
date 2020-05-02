@@ -78,20 +78,21 @@ p {
   }
 }
 
-.box {
+.loading {
   -webkit-transition: all 1.2s ease;
+  -webkit-transition: 1s;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: all 1.2s ease;
+  transition: 1s;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
   color: skyblue;
 }
 
-.box.loaded {
+.loading.done {
   top: -100%;
   pointer-events: none;
 }
@@ -348,6 +349,11 @@ p {
   white-space: nowrap;
 }
 
+.hero_catchcopy.typewriter {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
 .hero_desc {
   width: 100%;
   overflow: hidden;
@@ -356,8 +362,8 @@ p {
 }
 
 .hero_desc.typewriter {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 .message_body {

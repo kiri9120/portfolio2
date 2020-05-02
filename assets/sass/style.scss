@@ -84,7 +84,7 @@ p {
 }
 
 // loading
-.box {
+.loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,11 +92,11 @@ p {
   height: 100vh;
   z-index: 9999;
   -webkit-transition: all 1.2s ease;
-  transition: all 1.2s ease;
+  transition: 1s;
   color: $main-color;
   background-color: $white;
 
-  &.loaded {
+  &.done {
     top: -100%;
     pointer-events: none;
   }
@@ -302,6 +302,10 @@ p {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
+
+  &.typewriter {
+    animation-delay: 2s;
+  }
 }
 .hero_desc {
   width: 100%;
@@ -310,7 +314,7 @@ p {
   overflow: hidden;
 
   &.typewriter {
-    animation-delay: 4s;
+    animation-delay: 5s;
   }
 }
 
