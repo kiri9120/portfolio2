@@ -195,7 +195,7 @@ form#mail_form ul li label:hover {
 
 
 form#mail_form input#company {
-	width: 60%;
+	width: 100%;
 }
 
 form#mail_form input#name_1,
@@ -205,12 +205,12 @@ form#mail_form input#read_2,
 form#mail_form input#postal,
 form#mail_form input#phone,
 form#mail_form input#schedule {
-	width: 30%;
+	width: 100%;
 }
 
 form#mail_form input#mail_address,
 form#mail_form input#mail_address_confirm {
-	width: 80%;
+	width: 100%;
 }
 
 form#mail_form input#postal + a {
@@ -244,9 +244,9 @@ form#mail_form p#form_submit {
 
 form#mail_form input[type="button"] {
 	padding: 7px 20px;
-	border: 1px solid #4cae4c;
+	border: 1px solid blue;
 	border-radius: 3px;
-	background: #5cb85c;
+	background: blue;
 	font-size: 100%;
 	color: #ffffff;
 	font-family: inherit;
@@ -341,7 +341,3 @@ form#mail_form input#schedule {
 
 }
 /* 1000pixel end */
-
-
-
-
