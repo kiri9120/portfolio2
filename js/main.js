@@ -6,7 +6,7 @@ $(function () {
     threshold: 0.5,
   });
 
-  // slider
+  // スライダー
   $(".hero").vegas({
     overlay:
     "https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.0/overlays/07.png",
@@ -20,14 +20,13 @@ $(function () {
       { src: "assets/img/hero-bg2.jpg" }
     ],
   });
-  // $("a#previous").on("click", function (e) {
-  //   $("body").vegas("options", "transition", "fade2").vegas("previous");
-  //   e.preventDefault();
-  // });
-  // $("a#next").on("click", function (e) {
-  //   $("body").vegas("options", "transition", "fade2").vegas("next");
-  //   e.preventDefault();
-  // });
+
+  // ドロワーメニュー開閉
+  $(".menuBtn").click(function () {
+    $(this).toggleClass("close");
+    $(".menu").toggleClass("show");
+    $(".main").toggleClass("open");
+  });
 
   // page_top
   var pagetop = $("#page_top");
@@ -38,8 +37,14 @@ $(function () {
       pagetop.removeClass("show");
     }
   });
-  pagetop.click(function () {
-    $("body, html").animate({ scrollTop: 0 }, 500);
+
+  // ページ内リンクスクロール
+  $('a[href^="#"]').click(function(){
+    var speed = 500;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
     return false;
   });
 });

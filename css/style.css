@@ -8,7 +8,13 @@ p {
 }
 
 .main {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   margin-left: 100px;
+}
+
+.main.open {
+  margin-left: 400px;
 }
 
 .container {
@@ -76,8 +82,14 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  background: red;
+  z-index: 100;
+}
+
+.header_bar {
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  height: 100%;
 }
 
 .header_ttl {
@@ -106,13 +118,31 @@ p {
   writing-mode: vertical-lr;
 }
 
-.menuButton {
+.menuBtn {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.menuButton_inner {
+.menuBtn:hover {
+  cursor: pointer;
+}
+
+.menuBtn.close .menuBtn_line:first-child {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.menuBtn.close .menuBtn_line:nth-child(2) {
+  opacity: 0;
+}
+
+.menuBtn.close .menuBtn_line:last-child {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.menuBtn_inner {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -131,24 +161,26 @@ p {
   height: 100%;
 }
 
-.menuButton_line {
+.menuBtn_line {
+  -webkit-transition: 0.5s;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  transition: 0.5s;
   margin: auto;
   background: #000;
   width: 23px;
   height: 2px;
 }
 
-.menuButton_line:first-child {
+.menuBtn_line:first-child {
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 
-.menuButton_line:last-child {
+.menuBtn_line:last-child {
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
@@ -157,6 +189,7 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 10;
   background: skyblue;
   width: 100%;
   height: 130px;
@@ -181,6 +214,32 @@ p {
 
 .header_entryBtn_label {
   margin-top: 0.5em;
+  color: #fff;
+}
+
+.menu {
+  -webkit-box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  background: skyblue;
+  padding: 4em 2em;
+  width: 300px;
+}
+
+.menu.show {
+  left: 100px;
+}
+
+.menu_list > * + * {
+  margin-top: 2em;
+}
+
+.menu_item a {
   color: #fff;
 }
 
@@ -475,7 +534,7 @@ p {
     justify-content: flex-start;
     padding-top: 40px;
   }
-  .menuButton {
+  .menuBtn {
     width: 100%;
     height: 100%;
   }
