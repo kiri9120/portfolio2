@@ -23,7 +23,7 @@ gulp.task("sass", function () {
         mqpacker(),
       ])
     )
-    .pipe(gulp.dest("./"));
+    .pipe(gulp.dest("./css/"));
 });
 
 gulp.task("watch", function () {

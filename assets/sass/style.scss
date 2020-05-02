@@ -30,8 +30,12 @@ p {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
+
+  @include mq(md) {
+    width: 80%;
+    max-width: 1200px;
+  }
 }
 
 .section_ttl_block {
@@ -185,6 +189,90 @@ p {
   }
 }
 
+// service
 .section-service {
   background: green;
+
+  @include mq(md) {
+    padding: 100px 0;
+  }
+}
+.service_group {
+  display: flex;
+  justify-content: space-between;
+}
+.service_item {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc((100% - 30px * 3) / 4);
+  }
+}
+.service_item_img {
+  width: 100%;
+  text-align: center;
+  border: solid 1px black;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+.service_item_content {
+  padding: 2em 1em;
+}
+.service_item_ttl {
+  margin-bottom: 1em;
+}
+
+// works
+.section-works {
+  background: gray;
+
+  @include mq(md) {
+    padding: 100px 0;
+  }
+}
+.works_info {
+  margin-bottom: 3em;
+  text-align: center;
+}
+.works_group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.works_item {
+  width: 100%;
+  margin-bottom: 30px;
+
+  @include mq(md) {
+    width: calc((100% - 30px * 2) / 3);
+    max-width: 320px;
+  }
+}
+.works_item_img {
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+.works_item_ttl {
+  padding: 1em;
+  text-align: center;
+}
+
+// contact
+.section-contact {
+  background: pink;
+
+  @include mq(md) {
+    padding: 100px 0;
+  }
+}
+
+.test {
+  background: red;
 }
