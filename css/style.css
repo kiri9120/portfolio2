@@ -1,10 +1,10 @@
+@charset "UTF-8";
 p {
   line-height: 1.5;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1800px;
   overflow: hidden;
 }
 
@@ -30,6 +30,31 @@ p {
 .section_subttl {
   margin-top: 1em;
   font-size: 1rem;
+}
+
+.typewriter {
+  -webkit-animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
+  animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
+}
+
+@-webkit-keyframes blinkTextCursor {
+  /*点滅するカーソルのアニメーション*/
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blinkTextCursor {
+  /*点滅するカーソルのアニメーション*/
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .header {
@@ -168,7 +193,53 @@ p {
   left: 10%;
   transform: translateY(-50%);
   color: #fff;
+}
+
+.hero_catchcopy {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  width: 8em;
+  overflow: hidden;
   font-size: 5rem;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8em;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8em;
+  }
+}
+
+.hero_desc {
+  width: 12em;
+  overflow: hidden;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.hero_desc.typewriter {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12em;
+  }
 }
 
 .message_body {
@@ -293,14 +364,11 @@ p {
 }
 
 .splitting .char {
-  -webkit-transition: opacity 0.3s linear,
-    -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition-delay: calc(50ms * var(--char-index));
-  transition: opacity 0.3s linear,
-    -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
+  transition: opacity 0.3s linear, -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
   transition: transform 1s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear;
-  transition: transform 1s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear,
-    -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
+  transition: transform 1s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear, -webkit-transform 1s cubic-bezier(0.3, 0, 0.3, 1);
   transition-delay: calc(50ms * var(--char-index));
 }
 
@@ -321,16 +389,45 @@ p {
   opacity: 1;
 }
 
-.slidein:nth-child(odd)[data-scroll="out"] {
+.slidein[data-scroll="out"] {
   -webkit-transform: translateX(-100%) scale(0.1);
   transform: translateX(-100%) scale(0.1);
   opacity: 0;
 }
 
-.slidein:nth-child(even)[data-scroll="out"] {
-  -webkit-transform: translateX(100%) scale(0.1);
-  transform: translateX(100%) scale(0.1);
-  opacity: 0;
+.slideup.words .char {
+  -webkit-animation: slide-up 2s forwards;
+  -webkit-animation-delay: calc(0.5s + (0.1s * var(--char-index)));
+  animation: slide-up 2s forwards;
+  animation-delay: calc(0.5s + (0.1s * var(--char-index)));
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(125%);
+    transform: translateY(125%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+    font-size: 7rem;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(125%);
+    transform: translateY(125%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+    font-size: 7rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

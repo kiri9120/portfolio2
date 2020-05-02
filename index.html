@@ -9,6 +9,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <link rel="stylesheet" href="./css/mailform.css" />
     <link rel="stylesheet" href="./css/thanks.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -41,7 +43,8 @@
       <main class="main">
         <div class="hero">
           <div class="hero_inner">
-            あああああ
+            <p class="hero_catchcopy typewriter">MASATO KIRYU</p>
+            <p class="hero_desc typewriter">Web Engineer & Planner</p>
           </div>
         </div>
         <section id="Message" class="section-message">
@@ -222,14 +225,15 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="./js/mailform-js.php"></script>
     <script src="./js/main.js"></script>
     <script>
+      Splitting();
       ScrollOut({
         targets: ".slidein",
-        threshold: 0.5,
-        once: true
+        threshold: 0.5
       });
     </script>
   </body>
