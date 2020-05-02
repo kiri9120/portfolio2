@@ -186,19 +186,8 @@ p {
 
 .hero {
   position: relative;
-  background: url(../assets/img/hero-bg.jpg) center/cover;
   padding: 0 10%;
   height: 100vh;
-}
-
-.hero:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  content: "";
 }
 
 .hero_inner {
