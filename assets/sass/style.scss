@@ -12,12 +12,21 @@ $breakpoints: (
   }
 }
 
+// sizing
+$header-height-sp: 60px;
+
 // color
 $white: #fff;
 $main-color: skyblue;
 
 p {
+  font-size: .875rem;
   line-height: 1.8;
+
+  @include mq(md) {
+    font-size: 1rem;
+  }
+
 }
 
 .wrapper {
@@ -26,11 +35,21 @@ p {
 }
 
 .main {
-  margin-left: 100px;
   transition: 0.5s;
+  margin-top: 60px;
+
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: 100px;
+  }
 
   &.open {
-    margin-left: 400px;
+    margin-top: 260px;
+
+    @include mq(md) {
+      margin-top: 0;
+      margin-left: 400px;
+    }
   }
 }
 
@@ -45,9 +64,14 @@ p {
 }
 
 .section_ttl_block {
-  margin-bottom: 7em;
+  margin-bottom: 4em;
   border-left: 2px solid #000;
-  padding-left: 4em;
+  padding-left: 2em;
+
+  @include mq(md) {
+    margin-bottom: 7em;
+    padding-left: 4em;
+  }
 }
 .section_ttl {
   font-size: 2rem;
@@ -140,6 +164,8 @@ p {
   position: fixed;
   left: 0;
   top: 0;
+  width: 100%;
+  height: $header-height-sp;
   z-index: 100;
 
   @include mq(md) {
@@ -148,6 +174,7 @@ p {
   }
 }
 .header_bar {
+  width: 100%;
   height: 100%;
   position: relative;
   background: $white;
@@ -155,17 +182,22 @@ p {
 }
 
 .header_ttl {
+  height: $header-height-sp;
+  line-height: $header-height-sp;
   position: absolute;
   top: 0;
-  width: 100%;
-  color: $white;
+  left: 10px;
+
+  @include mq(md) {
+    width: 100%;
+    left: 0;
+  }
 }
 
 .header_ttl_inner {
-  display: flex;
-  flex-direction: column;
-
   @include mq(md) {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-top: 40px;
@@ -173,16 +205,24 @@ p {
 }
 
 .header_ttl2 {
+  display: none;
   margin-top: 2em;
   writing-mode: vertical-lr;
+
+  @include mq(md) {
+    display: block;
+  }
 }
 
 .menuBtn {
   position: absolute;
-  left: 0;
   top: 0;
+  right: 0;
+  width: 60px;
+  height: $header-height-sp;
 
   @include mq(md) {
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -239,7 +279,13 @@ p {
   width: 100%;
   height: 130px;
   z-index: 10;
+  color: $white;
   background: skyblue;
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
 }
 .header_entryBtn_inner {
   width: 100%;
@@ -261,17 +307,31 @@ p {
 
 .menu {
   position: fixed;
-  top: 0;
-  left: -200px;
-  bottom: 0;
-  padding: 4em 2em;
-  width: 300px;
+  top: -160px;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  height: 220px;
   background: $main-color;
   box-sizing: border-box;
   transition: 0.5s;
 
+  @include mq(md) {
+    top: 0;
+    left: -200px;
+    bottom: 0;
+    padding: 4em 2em;
+    width: 300px;
+    height: 100%;
+  }
+
   &.show {
-    left: 100px;
+    top: $header-height-sp;
+
+    @include mq(md) {
+      top: 0;
+      left: 100px;
+    }
   }
 }
 .menu_list {
@@ -285,9 +345,13 @@ p {
 
 // hero
 .hero {
-  height: 100vh;
+  height: calc(100vh - #{$header-height-sp});
   padding: 0 10%;
   position: relative;
+
+  @include mq(md) {
+    height: 100vh;
+  }
 }
 .hero_inner {
   position: absolute;
@@ -295,14 +359,22 @@ p {
   left: 10%;
   transform: translateY(-50%);
   color: $white;
-  width: 650px;
+  width: 260px;
+
+  @include mq(md) {
+    width: 650px;
+  }
 }
 .hero_catchcopy {
   width: 100%;
-  font-size: 5rem;
+  font-size: 2rem;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
+
+  @include mq(md) {
+    font-size: 5rem;
+  }
 
   &.typewriter {
     animation-delay: 2s;
@@ -310,9 +382,13 @@ p {
 }
 .hero_desc {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
+
+  @include mq(md) {
+    font-size: 2rem;
+  }
 
   &.typewriter {
     animation-delay: 5s;
@@ -321,9 +397,7 @@ p {
 
 // message
 .section-message {
-  @include mq(md) {
-    padding: 100px 0;
-  }
+  padding: 100px 0;
 }
 .message_body {
   display: flex;
@@ -341,7 +415,11 @@ p {
 }
 .message_txt {
   width: 70%;
-  padding: 2em;
+  padding-left: 2em;
+
+  @include mq(md) {
+    padding: 2em;
+  }
 
   > * + * {
     margin-top: 1em;
@@ -399,9 +477,7 @@ p {
 
 // works
 .section-works {
-  @include mq(md) {
-    padding: 100px 0;
-  }
+  padding: 100px 0;
 }
 .works_info {
   margin-bottom: 3em;
@@ -433,7 +509,7 @@ p {
   padding: 0.5em;
 }
 .works_item_tag {
-  font-size: .75rem;
+  font-size: 0.75rem;
   background: $main-color;
   color: $white;
   padding: 0.5em 1em;
@@ -445,19 +521,15 @@ p {
 
 // contact
 .section-contact {
-  background: pink;
-
-  @include mq(md) {
-    padding: 100px 0;
-  }
+  background: $main-color;
+  padding: 100px 0;
 }
 
 .footer {
-  background: #000;
   padding: 1em;
 }
 .copyright {
-  color: $white;
+  font-size: 0.75rem;
   text-align: center;
 }
 #page_top {
@@ -467,6 +539,7 @@ p {
   right: 5%;
   bottom: -50px;
   background: $main-color;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
   border-radius: 25px;
   transition: 0.5s;
 
