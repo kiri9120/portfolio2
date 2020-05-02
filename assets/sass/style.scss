@@ -61,8 +61,15 @@ p {
   animation: typewriter 3s steps(44) 1s 1 normal both,
     blinkTextCursor 700ms steps(44) infinite normal;
 }
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes blinkTextCursor {
-  /*点滅するカーソルのアニメーション*/
   from {
     border-right-color: rgba(255, 255, 255, 0.75);
   }
@@ -70,7 +77,6 @@ p {
     border-right-color: transparent;
   }
 }
-
 
 // header
 .header {
@@ -197,25 +203,17 @@ p {
   left: 10%;
   transform: translateY(-50%);
   color: $white;
+  width: 650px;
 }
 .hero_catchcopy {
-  width: 8em;
+  width: 100%;
   font-size: 5rem;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 8em;
-    }
-  }
 }
 .hero_desc {
-  width: 12em;
+  width: 100%;
   font-size: 2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -223,16 +221,7 @@ p {
   &.typewriter {
     animation-delay: 4s;
   }
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 12em;
-    }
-  }
 }
-
 
 // message
 .section-message {
@@ -341,10 +330,6 @@ p {
   }
 }
 
-.test {
-  background: red;
-}
-
 .footer {
   background: #000;
   padding: 1em;
@@ -353,7 +338,50 @@ p {
   color: $white;
   text-align: center;
 }
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 5%;
+  bottom: -50px;
+  background: $main-color;
+  border-radius: 25px;
+  transition: 0.5s;
 
+  &.show {
+    bottom: 5%;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f106";
+      font-size: 25px;
+      color: #fff;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+}
 // library
 
 .splitting {
