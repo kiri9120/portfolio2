@@ -170,7 +170,7 @@ p {
   top: 0;
   width: 100%;
   height: $header-height-sp;
-  z-index: 100;
+  z-index: 10;
   transition: 0.5s;
 
   @include mq(md) {
@@ -187,7 +187,7 @@ p {
   height: 100%;
   position: relative;
   background: $white;
-  z-index: 100;
+  z-index: 10;
 }
 
 .header_ttl {
@@ -579,11 +579,11 @@ p {
 // モーダル
 .modal {
   position: fixed;
-  z-index: 5;
-  top: $header-height-sp;
+  z-index: 20;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - #{$header-height-sp});
+  height: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
@@ -606,6 +606,7 @@ p {
   height: 100%;
   background-color: rgba(30, 30, 30, 0.9);
   position: relative;
+  z-index: 20;
 }
 
 .modal_wrapper {
