@@ -47,7 +47,7 @@ p {
   }
 
   &.open {
-    margin-top: 260px;
+    margin-top: 280px;
 
     @include mq(md) {
       margin-top: 0;
@@ -171,10 +171,15 @@ p {
   width: 100%;
   height: $header-height-sp;
   z-index: 100;
+  transition: 0.5s;
 
   @include mq(md) {
     width: 100px;
     height: 100%;
+  }
+
+  &.hide {
+    top: - #{$header-height-sp};
   }
 }
 .header_bar {
@@ -208,7 +213,11 @@ p {
   }
 }
 .header_ttl1 {
-  font-family: $main-font;
+  font-family: $signature-font;
+
+  @include mq(md) {
+    font-family: $main-font;
+  }
 }
 .header_ttl2 {
   display: none;
@@ -317,7 +326,7 @@ p {
 
 .menu {
   position: fixed;
-  top: -160px;
+  top: -220px;
   left: 0;
   padding: 1.5em 2em;
   width: 100%;
@@ -517,8 +526,9 @@ p {
   justify-content: space-around;
 }
 .works_item {
-  width: 100%;
-  margin-bottom: 50px;
+  width: 80%;
+
+  margin: 0 auto 50px auto;
   cursor: pointer;
 
   @include mq(md) {

@@ -4,6 +4,23 @@ $(function () {
     $(".loading").addClass("done");
   };
 
+  // スマホで下スクロールされたときheaderを隠す
+  var windowWidth = window.innerWidth;
+  if (windowWidth <= 767) {
+    var startPos = 0;
+    var winScrollTop = 0;
+    var header = $(".header");
+    $(window).on("scroll", function () {
+      winScrollTop = $(this).scrollTop();
+      if (winScrollTop >= startPos && winScrollTop > 200) {
+        header.addClass("hide");
+      } else {
+        header.removeClass("hide");
+      }
+      startPos = winScrollTop;
+    });
+  }
+
   // scroll out
   ScrollOut({
     targets: ".slidein",
@@ -67,16 +84,16 @@ $(function () {
     return false;
   });
 
-  // モーダル 
-  $('.works_item').click(function(){
-    $('#modal').addClass("show");
-    var clicked_item = $(this).data('id');
+  // モーダル
+  $(".works_item").click(function () {
+    $("#modal").addClass("show");
+    var clicked_item = $(this).data("id");
     console.log(clicked_item);
-    $('.' + clicked_item + '_img').addClass("show");
+    $("." + clicked_item + "_img").addClass("show");
   });
 
-  $('#modal_close , #modal_bg').click(function(){
-    $('#modal').removeClass("show");
-    $('.modal_inner').find("img").removeClass('show');
+  $("#modal_close , #modal_bg").click(function () {
+    $("#modal").removeClass("show");
+    $(".modal_inner").find("img").removeClass("show");
   });
 });
