@@ -47,7 +47,7 @@ p {
   }
 
   &.open {
-    margin-top: 280px;
+    // margin-top: 280px;
 
     @include mq(md) {
       margin-top: 0;
@@ -179,7 +179,7 @@ p {
   }
 
   &.hide {
-    top: - #{$header-height-sp};
+    top: -#{$header-height-sp};
   }
 }
 .header_bar {
@@ -353,9 +353,6 @@ p {
       left: 100px;
     }
   }
-  &.hide {
-    top: -220px;
-  }
 }
 .menu_list {
   > * + * {
@@ -363,6 +360,7 @@ p {
   }
 }
 .menu_item a {
+  width: 100%;
   color: $white;
   padding-bottom: 3px;
   position: relative;
@@ -380,7 +378,7 @@ p {
   }
 
   &:hover:after {
-    width: 100%;
+    width: 70px;
   }
 }
 

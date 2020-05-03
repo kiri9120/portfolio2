@@ -14,10 +14,6 @@ p {
   margin-top: 60px;
 }
 
-.main.open {
-  margin-top: 280px;
-}
-
 .container {
   margin: 0 auto;
   width: 90%;
@@ -333,10 +329,6 @@ p {
   top: 60px;
 }
 
-.menu.hide {
-  top: -220px;
-}
-
 .menu_list > * + * {
   margin-top: 2em;
 }
@@ -347,6 +339,7 @@ p {
   position: relative;
   transition: 0.5s;
   padding-bottom: 3px;
+  width: 100%;
   color: #fff;
 }
 
@@ -362,7 +355,7 @@ p {
 }
 
 .menu_item a:hover:after {
-  width: 100%;
+  width: 70px;
 }
 
 .hero {
