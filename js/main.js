@@ -66,4 +66,17 @@ $(function () {
     $("html, body").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
+
+  // モーダル 
+  $('.works_item').click(function(){
+    $('#modal').addClass("show");
+    var clicked_item = $(this).data('id');
+    console.log(clicked_item);
+    $('.' + clicked_item + '_img').addClass("show");
+  });
+
+  $('#modal_close , #modal_bg').click(function(){
+    $('#modal').removeClass("show");
+    $('.modal_inner').find("img").removeClass('show');
+  });
 });
