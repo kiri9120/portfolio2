@@ -30,6 +30,7 @@ p {
 }
 
 .section_ttl {
+  font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -368,6 +369,7 @@ p {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   width: 100%;
   overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
   white-space: nowrap;
 }
@@ -817,7 +819,7 @@ p {
     height: 100vh;
   }
   .hero_inner {
-    width: 650px;
+    width: 600px;
   }
   .hero_catchcopy {
     font-size: 5rem;
