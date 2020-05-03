@@ -17,7 +17,7 @@ $header-height-sp: 60px;
 
 // color
 $white: #fff;
-$main-color: skyblue;
+$main-color: #2979ff;
 
 // font
 $main-font : 'Noto Sans', sans-serif;
@@ -282,7 +282,7 @@ p {
   width: 100%;
   height: 130px;
   z-index: 10;
-  background: skyblue;
+  background: $main-color;
   display: none;
 
   @include mq(md) {
@@ -632,8 +632,14 @@ p {
 
 // contact
 .section-contact {
-  background: $main-color;
+  background: url("../assets/img/contact-bg.jpg") center/cover;
   padding: 100px 0;
+
+  .section_ttl_block {
+    color: $white;
+    border-left-color: $white;
+  }
+
 }
 
 .footer {

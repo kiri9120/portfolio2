@@ -7,7 +7,8 @@ form#mail_form * {
 }
 
 form#mail_form {
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	margin: 50px auto;
 	padding: 10px 0;
 	background: #ffffff;
@@ -26,7 +27,7 @@ form#mail_form dl {
 
 form#mail_form dl dt {
 	clear: both;
-	width: 30%;
+	width: 20%;
 	float: left;
 	border-top: 1px solid #cccccc;
 	padding: 15px 0;
@@ -35,7 +36,7 @@ form#mail_form dl dt {
 }
 
 form#mail_form dl dd {
-	width: 65%;
+	width: 75%;
 	float: right;
 	border-top: 1px solid #cccccc;
 	padding: 15px 0 15px 5%;
@@ -49,7 +50,7 @@ form#mail_form dl dt:first-child + dd {
 form#mail_form dl dt span {
 	display: block;
 	font-size: 85%;
-	color: #3377ff;
+	color: #2979ff;
 }
 
 
@@ -240,13 +241,14 @@ form#mail_form p#form_submit {
 	margin: 0 auto;
 	padding: 15px 0;
 	border-top: 1px solid #cccccc;
+	text-align: center;
 }
 
 form#mail_form input[type="button"] {
 	padding: 7px 20px;
-	border: 1px solid blue;
+	border: 1px solid #2979ff;
 	border-radius: 3px;
-	background: blue;
+	background: #2979ff;
 	font-size: 100%;
 	color: #ffffff;
 	font-family: inherit;
@@ -255,13 +257,12 @@ form#mail_form input[type="button"] {
 
 form#mail_form input[type="button"]:hover {
 	cursor: pointer;
-	background: #449d44;
-	border: 1px solid #398439;
+	opacity: 0.8;
 }
 
-form#mail_form input#form_submit_button {
+/* form#mail_form input#form_submit_button {
 	margin-left: 35%;
-}
+} */
 
 
 
