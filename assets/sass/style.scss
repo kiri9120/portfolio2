@@ -396,7 +396,7 @@ p {
   left: 10%;
   transform: translateY(-50%);
   color: $white;
-  width: 230px;
+  width: 250px;
 
   @include mq(md) {
     width: 600px;
@@ -406,6 +406,7 @@ p {
   width: 100%;
   font-size: 2rem;
   font-family: $main-font;
+  letter-spacing: 2px;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
