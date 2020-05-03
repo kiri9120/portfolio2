@@ -476,11 +476,16 @@ p {
   }
 }
 .service_item_img {
-  width: 100%;
-  text-align: center;
+  width: 200px;
+  margin: 0 auto;
   border: solid 1px $white;
   padding: 2em;
+  text-align: center;
   box-sizing: border-box;
+
+  @include mq() {
+    width: 100%;
+  }
 
   img {
     width: 100%;
