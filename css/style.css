@@ -319,7 +319,7 @@ p {
   -webkit-box-sizing: border-box;
   -webkit-transition: 0.5s;
   position: fixed;
-  top: -220px;
+  top: -160px;
   left: 0;
   transition: 0.5s;
   box-sizing: border-box;
@@ -331,6 +331,10 @@ p {
 
 .menu.show {
   top: 60px;
+}
+
+.menu.hide {
+  top: -220px;
 }
 
 .menu_list > * + * {

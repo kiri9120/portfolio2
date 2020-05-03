@@ -326,7 +326,7 @@ p {
 
 .menu {
   position: fixed;
-  top: -220px;
+  top: -160px;
   left: 0;
   padding: 1.5em 2em;
   width: 100%;
@@ -351,6 +351,9 @@ p {
       top: 0;
       left: 100px;
     }
+  }
+  &.hide {
+    top: -220px;
   }
 }
 .menu_list {

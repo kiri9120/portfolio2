@@ -10,12 +10,15 @@ $(function () {
     var startPos = 0;
     var winScrollTop = 0;
     var header = $(".header");
+    var menu = $(".menu");
     $(window).on("scroll", function () {
       winScrollTop = $(this).scrollTop();
       if (winScrollTop >= startPos && winScrollTop > 200) {
         header.addClass("hide");
+        menu.addClass("hide");
       } else {
         header.removeClass("hide");
+        menu.addClass("hide");
       }
       startPos = winScrollTop;
     });
@@ -46,6 +49,7 @@ $(function () {
   $(".menuBtn").click(function () {
     $(this).toggleClass("close");
     $(".menu").toggleClass("show");
+    $(".menu").removeClass("hide");
     $(".main").toggleClass("open");
   });
 
