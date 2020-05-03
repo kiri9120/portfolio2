@@ -20,7 +20,8 @@ $white: #fff;
 $main-color: #2979ff;
 
 // font
-$main-font : 'Noto Sans', sans-serif;
+$main-font: "Noto Sans", sans-serif;
+$signature-font: "Nothing You Could Do", cursive;
 
 p {
   font-size: 0.875rem;
@@ -206,10 +207,13 @@ p {
     padding-top: 40px;
   }
 }
-
+.header_ttl1 {
+  font-family: $main-font;
+}
 .header_ttl2 {
   display: none;
-  margin-top: 2em;
+  margin-top: 1em;
+  font-family: $signature-font;
   writing-mode: vertical-lr;
 
   @include mq(md) {
@@ -275,7 +279,7 @@ p {
   }
 }
 
-.header_entryBtn {
+.header_contactBtn {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -289,7 +293,7 @@ p {
     display: block;
   }
 }
-.header_entryBtn_inner {
+.header_contactBtn_inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -302,10 +306,11 @@ p {
     text-align: center;
   }
 }
-.header_entryBtn_icon {
+.header_contactBtn_icon {
   font-size: 1.5em;
 }
-.header_entryBtn_label {
+.header_contactBtn_label {
+  font-family: $main-font;
   margin-top: 0.75em;
   font-size: 0.875rem;
 }
@@ -639,7 +644,6 @@ p {
     color: $white;
     border-left-color: $white;
   }
-
 }
 
 .footer {

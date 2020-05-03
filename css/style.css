@@ -188,11 +188,16 @@ p {
   line-height: 60px;
 }
 
+.header_ttl1 {
+  font-family: "Noto Sans", sans-serif;
+}
+
 .header_ttl2 {
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   display: none;
-  margin-top: 2em;
+  margin-top: 1em;
+  font-family: "Nothing You Could Do", cursive;
   writing-mode: vertical-lr;
 }
 
@@ -265,7 +270,7 @@ p {
   transform: translateY(300%);
 }
 
-.header_entryBtn {
+.header_contactBtn {
   display: none;
   position: absolute;
   bottom: 0;
@@ -276,7 +281,7 @@ p {
   height: 130px;
 }
 
-.header_entryBtn_inner {
+.header_contactBtn_inner {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -294,12 +299,13 @@ p {
   color: #fff;
 }
 
-.header_entryBtn_icon {
+.header_contactBtn_icon {
   font-size: 1.5em;
 }
 
-.header_entryBtn_label {
+.header_contactBtn_label {
   margin-top: 0.75em;
+  font-family: "Noto Sans", sans-serif;
   font-size: 0.875rem;
 }
 
@@ -797,10 +803,10 @@ p {
     width: 100%;
     height: 100%;
   }
-  .header_entryBtn {
+  .header_contactBtn {
     display: block;
   }
-  .header_entryBtn_inner {
+  .header_contactBtn_inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
