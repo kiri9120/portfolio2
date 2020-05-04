@@ -31,6 +31,10 @@ p {
   font-weight: bold;
 }
 
+.section_ttl span {
+  color: #2979ff;
+}
+
 .section_subttl {
   margin-top: 1em;
   font-size: 1rem;

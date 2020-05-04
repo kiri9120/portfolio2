@@ -84,6 +84,10 @@ p {
   @include mq(md) {
     font-size: 4rem;
   }
+
+  span {
+    color: $main-color;
+  }
 }
 .section_subttl {
   font-size: 1rem;
