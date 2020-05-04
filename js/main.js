@@ -8,6 +8,7 @@ $(function () {
   ScrollOut({
     targets: ".slidein",
     threshold: 0.5,
+    once: "true"
   });
 
   // スライダー

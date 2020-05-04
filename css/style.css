@@ -716,41 +716,6 @@ p {
   opacity: 0;
 }
 
-.slideup.words .char {
-  -webkit-animation: slide-up 2s forwards;
-  -webkit-animation-delay: calc(0.5s + (0.1s * var(--char-index)));
-  animation: slide-up 2s forwards;
-  animation-delay: calc(0.5s + (0.1s * var(--char-index)));
-}
-
-@-webkit-keyframes slide-up {
-  from {
-    -webkit-transform: translateY(125%);
-    transform: translateY(125%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1;
-    font-size: 7rem;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    -webkit-transform: translateY(125%);
-    transform: translateY(125%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1;
-    font-size: 7rem;
-  }
-}
-
 @media screen and (min-width: 768px) {
   p {
     font-size: 1rem;

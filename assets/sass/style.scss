@@ -728,22 +728,3 @@ p {
   opacity: 0;
   transform: translateX(-100%) scale(0.1);
 }
-
-.slideup.words {
-  .char {
-    animation: slide-up 2s forwards;
-    animation-delay: calc(0.5s + (0.1s * var(--char-index)));
-
-    @keyframes slide-up {
-      from {
-        transform: translateY(125%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0%);
-        opacity: 1;
-        font-size: 7rem;
-      }
-    }
-  }
-}
