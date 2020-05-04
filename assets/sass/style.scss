@@ -20,8 +20,13 @@ $white: #fff;
 $main-color: #2979ff;
 
 // font
-$main-font: "Noto Sans", sans-serif;
+$main-font: 'Lato', sans-serif;
+$jp-font: 'Noto Sans JP', sans-serif;
 $signature-font: "Nothing You Could Do", cursive;
+
+body {
+  font-family: $jp-font;
+}
 
 p {
   font-size: 0.875rem;
@@ -402,6 +407,7 @@ p {
   transform: translateY(-50%);
   color: $white;
   width: 250px;
+  font-family: $main-font;
 
   @include mq(md) {
     width: 600px;
@@ -410,7 +416,6 @@ p {
 .hero_catchcopy {
   width: 100%;
   font-size: 2rem;
-  font-family: $main-font;
   letter-spacing: 2px;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
@@ -426,7 +431,7 @@ p {
 }
 .hero_desc {
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.25rem;
   white-space: nowrap;
   overflow: hidden;
 

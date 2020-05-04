@@ -14,7 +14,7 @@ form#mail_form {
   border: 1px solid #cccccc;
   border-radius: 7px;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
-  font-size: 95%;
+  font-size: 0.875rem;
   line-height: 1.8;
 }
 
@@ -262,7 +262,6 @@ form#mail_form input[type="button"]:hover {
 @media screen and (max-width: 767px) {
   form#mail_form {
     width: 100%;
-    font-size: 100%;
   }
 
   form#mail_form dl {
