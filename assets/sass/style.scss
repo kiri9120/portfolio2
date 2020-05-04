@@ -472,18 +472,7 @@ p {
 
 // service
 .section-service {
-  background: url("../assets/img/hero-bg1.jpg") center/cover;
-  color: $white;
-
-  .filter {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .container {
-    padding: 100px 0;
-  }
-  .section_ttl_block {
-    border-left-color: $white;
-  }
+  padding: 100px 0;
 }
 .service_group {
   display: flex;
@@ -654,13 +643,7 @@ p {
 
 // contact
 .section-contact {
-  background: url("../assets/img/contact-bg.jpg") center/cover;
   padding: 100px 0;
-
-  .section_ttl_block {
-    color: $white;
-    border-left-color: $white;
-  }
 }
 
 .footer {

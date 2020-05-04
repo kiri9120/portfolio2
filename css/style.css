@@ -438,20 +438,7 @@ p {
 }
 
 .section-service {
-  background: url("../assets/img/hero-bg1.jpg") center/cover;
-  color: #fff;
-}
-
-.section-service .filter {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.section-service .container {
   padding: 100px 0;
-}
-
-.section-service .section_ttl_block {
-  border-left-color: #fff;
 }
 
 .service_group {
@@ -631,13 +618,7 @@ p {
 }
 
 .section-contact {
-  background: url("../assets/img/contact-bg.jpg") center/cover;
   padding: 100px 0;
-}
-
-.section-contact .section_ttl_block {
-  border-left-color: #fff;
-  color: #fff;
 }
 
 .footer {
