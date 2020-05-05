@@ -581,7 +581,7 @@ p {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: 0.4s;
+  transition: 0.5s;
 
   @include mq(md) {
     top: 0;
@@ -609,9 +609,8 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: auto;
-  max-height: 90%;
+  width: 90%;
+  height: 90%;
   max-width: 680px;
   background-color: #fff;
   overflow-y: scroll;
