@@ -439,6 +439,7 @@ p {
 .message_txt {
   padding-left: 2em;
   width: 70%;
+  word-break: break-all;
 }
 
 .message_txt > * + * {

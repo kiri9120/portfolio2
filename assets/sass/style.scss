@@ -469,6 +469,7 @@ p {
 .message_txt {
   width: 70%;
   padding-left: 2em;
+  word-break: break-all;
 
   @include mq(md) {
     padding: 2em;
