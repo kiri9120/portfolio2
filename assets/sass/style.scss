@@ -24,6 +24,10 @@ $main-font: 'Lato', sans-serif;
 $jp-font: 'Noto Sans JP', sans-serif;
 $signature-font: "Nothing You Could Do", cursive;
 
+.underline {
+  text-decoration: underline;
+}
+
 body {
   font-family: $jp-font;
 }
