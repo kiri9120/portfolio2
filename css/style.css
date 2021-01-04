@@ -89,6 +89,88 @@ p {
   }
 }
 
+.loading {
+  -webkit-transition: all 1.2s ease;
+  -webkit-transition: 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: 1s;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  color: #2979ff;
+}
+
+.loading.done {
+  top: -100%;
+  pointer-events: none;
+}
+
+.spinner {
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+  -webkit-animation: spinner 1.4s infinite linear forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  animation: spinner 1.4s infinite linear forwards;
+  background-color: #2979ff;
+  width: 120px;
+  width: 20px;
+  height: 120px;
+  height: 20px;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-box-shadow: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(0) scale(0.5);
+    transform: translate(-50%, -50%) rotate(0) scale(0.5);
+    box-shadow: 0;
+  }
+  50% {
+    -webkit-box-shadow: -25px 0, 25px 0, 0 -25px, 0 25px, 25px 25px, -25px -25px, 25px -25px, -25px 25px;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    box-shadow: -25px 0, 25px 0, 0 -25px, 0 25px, 25px 25px, -25px -25px, 25px -25px, -25px 25px;
+    background-color: transparent;
+  }
+  100% {
+    -webkit-box-shadow: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+    opacity: 0.5;
+    box-shadow: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-box-shadow: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(0) scale(0.5);
+    transform: translate(-50%, -50%) rotate(0) scale(0.5);
+    box-shadow: 0;
+  }
+  50% {
+    -webkit-box-shadow: -25px 0, 25px 0, 0 -25px, 0 25px, 25px 25px, -25px -25px, 25px -25px, -25px 25px;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    box-shadow: -25px 0, 25px 0, 0 -25px, 0 25px, 25px 25px, -25px -25px, 25px -25px, -25px 25px;
+    background-color: transparent;
+  }
+  100% {
+    -webkit-box-shadow: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+    opacity: 0.5;
+    box-shadow: 0;
+  }
+}
+
 .header {
   -webkit-transition: 0.5s;
   position: fixed;
@@ -122,7 +204,7 @@ p {
 
 .header_ttl1 {
   font-family: "Nothing You Could Do", cursive;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .header_ttl2 {
@@ -131,6 +213,7 @@ p {
   display: none;
   margin-top: 1em;
   font-family: "Nothing You Could Do", cursive;
+  font-size: 1.5rem;
   writing-mode: vertical-lr;
 }
 
