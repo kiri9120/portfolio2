@@ -204,10 +204,8 @@ p {
 }
 
 .header_ttl {
-  font-family: $signature-font;
   height: $header-height-sp;
   line-height: $header-height-sp;
-  font-size: 1.25rem;
   position: absolute;
   top: 0;
   left: 10px;
@@ -215,23 +213,34 @@ p {
   @include mq(md) {
     width: 100%;
     left: 0;
-    height: auto;
-    text-align: center;
   }
 }
 
 .header_ttl_inner {
   @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding-top: 40px;
-    writing-mode: vertical-lr;
-
   }
 }
-.header_ttl-sub {
-  display: none;
+.header_ttl1 {
+  font-family: $signature-font;
+  font-size: 1.25rem;
 
   @include mq(md) {
-    display: inline;
+    display: none;
+  }
+}
+.header_ttl2 {
+  display: none;
+  margin-top: 1em;
+  font-family: $signature-font;
+  writing-mode: vertical-lr;
+
+  @include mq(md) {
+    display: block;
   }
 }
 

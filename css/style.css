@@ -117,13 +117,21 @@ p {
   top: 0;
   left: 10px;
   height: 60px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 1.25rem;
   line-height: 60px;
 }
 
-.header_ttl-sub {
+.header_ttl1 {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 1.25rem;
+}
+
+.header_ttl2 {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
   display: none;
+  margin-top: 1em;
+  font-family: "Nothing You Could Do", cursive;
+  writing-mode: vertical-lr;
 }
 
 .menuBtn {
@@ -679,17 +687,32 @@ p {
   .header_ttl {
     left: 0;
     width: 100%;
-    height: auto;
-    text-align: center;
   }
   .header_ttl_inner {
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     padding-top: 40px;
-    writing-mode: vertical-lr;
   }
-  .header_ttl-sub {
-    display: inline;
+  .header_ttl1 {
+    display: none;
+  }
+  .header_ttl2 {
+    display: block;
   }
   .menuBtn {
     top: 280px;
