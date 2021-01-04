@@ -227,9 +227,10 @@ p {
 }
 .header_ttl1 {
   font-family: $signature-font;
+  font-size: 1.25rem;
 
   @include mq(md) {
-    font-family: $main-font;
+    display: none;
   }
 }
 .header_ttl2 {
