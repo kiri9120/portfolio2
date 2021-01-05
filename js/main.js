@@ -68,6 +68,13 @@ $(function () {
     return false;
   });
 
+  // hero縦サイズをsafari考慮
+  if (window.matchMedia( "(min-width: 768px)" ).matches) {
+    $('.hero').height(window.innerHeight + 'px');
+  } else {
+    $('.hero').height(window.innerHeight - 60 + 'px');
+  }
+
   // モーダル
   $(".works_item").click(function () {
     $("#modal").addClass("show");

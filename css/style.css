@@ -291,7 +291,6 @@ p {
 .hero {
   position: relative;
   padding: 0 10%;
-  height: calc(100vh - 60px);
 }
 
 .hero_inner {

@@ -347,7 +347,7 @@ p {
 
 // hero
 .hero {
-  height: calc(100vh - #{$header-height-sp});
+  // height: calc(100vh - #{$header-height-sp});
   padding: 0 10%;
   position: relative;
 
